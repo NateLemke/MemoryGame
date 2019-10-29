@@ -1,0 +1,28 @@
+body {
+    background-color: lightblue;
+}
+
+#main_container {
+    background-color: lightcoral;
+    margin: auto;
+    margin-top: 25px;
+    position: relative;
+    width: 40%;
+    height: 0;
+    padding-bottom: 40%;
+}
+
+.panel {
+    background-color:lightpink;
+    display: inline-block;
+    width: 15%;
+    height: 0;
+    padding-bottom: 15%;
+    margin: 2.2%;
+}
+
+.panel:hover {
+    background-color: lightsalmon;
+}
+
+
