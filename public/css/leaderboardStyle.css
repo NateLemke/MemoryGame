@@ -24,3 +24,15 @@ th {
 tr:nth-child(even) {
     background-color: lightpink;
 }
+
+#resetButton {
+    background-color: lightcoral;
+    text-align: center;
+    border-radius: 10px;
+    border-width: 0;
+    width: 20%;
+    height: 50px;
+    font-size: 20pt;
+    margin-left: 40%;
+    margin-top: 20px;
+}
