@@ -1,0 +1,20 @@
+<DOCTYPE html>
+    <html>
+        <head>
+            <title>
+                Memory Game
+            </title>
+            <link rel="stylesheet" type="text/css" href="css/summaryStyle.css">
+        </head>
+        <body>
+            <div id = "summary_Container">
+                <h1>Your score is: {{score}}</h1>
+                <p>Enter your name:</p>
+                <form action="/submit" method="post">
+                    <input type="text" id="p_name" name="p_name"><br>
+                    <input type="hidden" id="p_score" name="p_score" value={{score}}>
+                    <button type="submit" id="buttonSubmit">Submit</button> 
+                </form>
+            </div>
+        </body>
+    </html>

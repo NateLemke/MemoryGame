@@ -1,0 +1,39 @@
+body {
+    background-color: lightblue;
+}
+
+p {
+    font-size: 20pt;
+}
+
+h1 {
+    padding-top: 5%;
+}
+
+
+#summary_Container {
+    background-color: lightcoral;
+    width: 30%;
+    padding-bottom: 5%;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+     border-radius: 10px;
+}
+
+#p_name {
+    width: 80%;
+    height: 10%;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 20pt;
+}
+
+#buttonSubmit {
+    background-color:lightpink;
+    width: 30%;
+    height: 10%;
+    margin-top: 10%;
+    border-radius: 10px;
+    border-width: 0;
+}

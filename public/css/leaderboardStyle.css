@@ -1,0 +1,26 @@
+body {
+    background-color: lightblue;
+}
+
+#leaderboard {
+    margin: auto;
+    width: 50%;
+    font-size: 20pt;
+    background-color: lightcoral;
+    border-radius: 20pt;
+    text-align: center;
+    padding: 10px
+}
+
+td {
+    border-radius: 5pt;
+}
+
+th {
+    background-color: lightsalmon;
+    border-radius: 5pt;
+}
+
+tr:nth-child(even) {
+    background-color: lightpink;
+}
