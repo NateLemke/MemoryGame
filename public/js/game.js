@@ -94,7 +94,10 @@ function clickTile(id) {
         document.getElementById(xy).style.backgroundColor = "red";
         document.getElementById(xy).onclick = '';
         if(p_score <= 0) {
+            var mc = document.getElementById("main_container");
+            mc.style.transform = "rotate(0deg)";
             hideTiles();
+            document.getElementById("restartButton").style.display = "inline-block";
         }
     }
 
@@ -164,5 +167,10 @@ function hidePattern() {
     for(let i=0; i<tiles.length; i++) {
             tiles[i].style.backgroundColor="lightpink";
     }
+}
+
+//resets game
+function restart() {
+    location.reload();
 }
 

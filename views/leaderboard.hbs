@@ -13,18 +13,12 @@
                     <th>Name</th>
                     <th>Score</th>
                 </tr>
+                {{#each players}}
                 <tr>
-                    <td>{{p_name}}</td>
-                    <td>{{p_score}}</td>
+                    <td>{{this.name}}</td>
+                    <td>{{this.score}}</td>
                 </tr>
-                <tr>
-                    <td>{{p_name}}</td>
-                    <td>{{p_score}}</td>
-                </tr>
-                <tr>
-                    <td>{{p_name}}</td>
-                    <td>{{p_score}}</td>
-                </tr>
+                {{/each}}
             </table>
         </body>
     </html>

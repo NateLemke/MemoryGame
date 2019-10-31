@@ -3,6 +3,9 @@ let app = express();
 let bodyParser = require('body-parser');
 let path = require('path');
 
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://NateLemke:Passwordlogin3@memorygameleaderboard-ue4hp.azure.mongodb.net/test?retryWrites=true&w=majority";
+
 const expressHbs = require('express-handlebars');
 
 app.engine(
@@ -32,10 +35,30 @@ app.post('/summary', (req,res) => {
 
 app.post('/submit', (req,res) => {
     let name = req.body.p_name;
-    let score = req.body.p_score;
+    let score = parseInt(req.body.p_score);
+    MongoClient.connect(uri, function(err, client) {
+        if(err) {
+            console.log("Error connecting to MongoDB");
+        }
+        console.log("Connected to MongoDB");
 
-    res.render('leaderboard', {layout: false, p_name: name, p_score: score})
+        var db = client.db("leaderboardDB");
+        var obj = {name: name, score: score};
+        db.collection("players").insertOne(obj, function(err,res) {
+            if(err) throw err;
+            console.log("entry sent");
+            
+        });
+
+        db.collection("players").find().sort({score:-1}).limit(5).toArray(function(err,result) {
+            if(err) throw err;
+            console.log(result);
+            res.render('leaderboard', {layout: false, players: result});
+            client.close;
+        });
+    });
 });
 
-app.listen(7777);
+const port = process.env.PORT || 3000;
+app.listen(port, function() {});
 
