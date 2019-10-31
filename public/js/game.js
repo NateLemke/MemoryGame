@@ -1,14 +1,23 @@
+//plays when a correct pattern is chosen
 var correctSound = new Audio("sounds/yea.mp3");
+//plays when container rotates
 var shuffleSound = new Audio("sounds/shuffle.mp3");
+//the player's score
 var p_score = 10;
+//chooses the direction the container rotates
 var dir = Math.round(Math.random());
+//the container's current orientation
 var orientation = 0;
+//the orientation to move the container to
 var deg = 0;
+//the current difficulty
 var difficulty = 5;
+//the number of correct tiles the player has picked for the current pattern
 var picked = 0;
+//the number of correct tiles in the current pattern
 var corrects = 0;
 
-
+//an array showing which tiles are correct
 var tileArray = [];
 
 
@@ -174,3 +183,4 @@ function restart() {
     location.reload();
 }
 
+ 

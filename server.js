@@ -36,6 +36,7 @@ app.post('/summary', (req,res) => {
 app.post('/submit', (req,res) => {
     let name = req.body.p_name;
     let score = parseInt(req.body.p_score);
+
     MongoClient.connect(uri, function(err, client) {
         if(err) {
             console.log("Error connecting to MongoDB");
